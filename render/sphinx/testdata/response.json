@@ -1,0 +1,64 @@
+{
+    "title": "Параметры ответа",
+    "$schema": "http://json-schema.org/schema#",
+    "description": "Описание ответа",
+    "type": "object",
+    "properties": {
+        "string_name": {
+            "description": "Описание string",
+            "type": "string",
+            "maxLength": 10
+        },
+        "integer_name": {
+            "description": "Описание integer",
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 18
+        },
+        "boolean_name": {
+            "description": "Описание boolean",
+            "type": "boolean",
+            "enum": [true, false]
+        },
+        "object_name": {
+            "description": "Описание object",
+            "type": "object",
+            "properties": {
+                "object_string_name": {
+                    "description": "Описание object string",
+                    "type": "string"
+                },
+                "object_integer_name": {
+                    "description": "Описание object integer",
+                    "type": "integer"
+                },
+                "object_object_name": {
+                    "description": "Описание object object",
+                    "type": "object",
+                    "properties": {
+                        "object_object_string_name": {
+                            "description": "Описание object object string",
+                            "type": "string",
+                            "maxLength": 12,
+                            "minLength": 2
+                        },
+                        "object_object_integer_name": {
+                            "description": "Описание object object integer",
+                            "type": "integer"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "object_integer_name"
+            ]
+        }
+    },
+    "required": [
+        "boolean_name",
+        "object_name"
+    ]
+}
+
+
+
